@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义容器类，用于设置页面宽度 */
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @apply bg-gray-100;
+}
+
+#app {
+  @apply min-h-screen flex flex-col;
+}
+
+/* 设置滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-300 rounded hover:bg-blue-400; 
+}
